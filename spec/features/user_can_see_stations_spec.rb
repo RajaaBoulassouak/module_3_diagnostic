@@ -15,7 +15,7 @@ feature 'User can search for the closest fuel stations' do
     # And the stations should be limited to Electric and Propane
     # And for each of the stations I should see Name, Address, Fuel Types, Distance, and Access Times
     expect(page).to have_css('.station', count: 10)
-    within(first('station')) do 
+    within(first('.station')) do 
       expect(page).to have_css('.name')
       expect(page).to have_css('.address')
       expect(page).to have_css('.fuel_type')
