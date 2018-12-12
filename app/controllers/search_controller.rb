@@ -1,6 +1,5 @@
 class SearchController < ApplicationController
   def index
-    require "pry"; binding.pry
-    @facade = StationFacade.new(params[:zip_code])
+    @facade = StationFacade.new(params[:q])
   end
 end
