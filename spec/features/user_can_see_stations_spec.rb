@@ -18,15 +18,15 @@ feature 'User can search for the closest fuel stations' do
     within(first('station')) do 
       expect(page).to have_css('.name')
       expect(page).to have_css('.address')
-      expect(page).to have_css('.fuel_types')
+      expect(page).to have_css('.fuel_type')
       expect(page).to have_css('.distance')
       expect(page).to have_css('.access_times')
     end
-    expect(page).to have_content()
-    expect(page).to have_content()
-    expect(page).to have_content()
-    expect(page).to have_content()
-    expect(page).to have_content()
+    expect(page).to have_content("UDR")
+    expect(page).to have_content("800 Acoma St")
+    expect(page).to have_content("ELEC")
+    expect(page).to have_content("0.31422")
+    expect(page).to have_content("24 hours daily")
   end 
 end 
 

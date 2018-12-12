@@ -6,7 +6,7 @@ class StationFacade
   
   def stations
     data = station_service.get_stations(@zip)
-    data[:fuel_stations].each do |station_data|
+    data[:fuel_stations].map do |station_data|
       Station.new(station_data)
     end
   end
