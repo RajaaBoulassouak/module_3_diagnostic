@@ -1,11 +1,11 @@
 class StationFacade 
   
-  def initialize(zip_code)
-    @zip_code = zip_code
+  def initialize(zip)
+    @zip = zip
   end
   
   def stations
-    data = station_service.get_stations(zip_code)
+    data = station_service.get_stations(@zip)
   end
   
   private 
