@@ -5,5 +5,12 @@ class StationFacade
   end
   
   def stations
+    data = station_service.get_stations(zip_code)
+  end
+  
+  private 
+  
+  def station_service
+    StationService.new 
   end
 end 
